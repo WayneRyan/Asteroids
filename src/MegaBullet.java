@@ -1,13 +1,10 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Bullet {
-
+public class MegaBullet {
 	private double x, y, vx, vy;
-	private Color myColor;
 
-	public Bullet(double direction) {
-		myColor = Color.orange;
+	public MegaBullet(double direction) {
 		x = MainClass.WIDTH / 2;
 		y = MainClass.HEIGHT / 2;
 		this.vx = Math.sin(direction) * 20;
@@ -16,13 +13,9 @@ public class Bullet {
 		update(0, 0);
 	}
 
-	public void setColor(Color newColor) {
-		myColor = newColor;
-	}
-
 	public void draw(Graphics g) {
-		g.setColor(Color.white);
-		g.fillOval((int) x - 5, (int) y - 5, 10, 10);
+		g.setColor(Color.GRAY);
+		g.fillOval((int) x - 30, (int) y - 30, 60, 60);
 	}
 
 	public void update(double dx, double dy) {
@@ -39,3 +32,6 @@ public class Bullet {
 	}
 
 }
+
+
+
